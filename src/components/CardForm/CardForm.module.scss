@@ -1,0 +1,27 @@
+@import '../../styles/settings.scss';
+
+.cardForm {
+  text-align: left;
+
+  input {
+    min-width: 150px;
+    margin-right: 10px;
+  }
+
+  button {
+    margin: 0;
+  }
+}
+
+
+
+@media (max-width: 400px){
+
+  input {
+    min-width: 50px;
+  }
+
+  button {
+    padding: 0;
+  }
+}
