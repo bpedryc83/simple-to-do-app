@@ -1,0 +1,29 @@
+@import '../../styles/settings.scss';
+
+.columnForm {
+
+  text-align: center;
+  padding: 10px;
+  span {
+    margin: 0 8px;
+  }
+}
+
+.formDiv {
+  text-align: center;
+}
+
+@media (max-width: 550px){
+  .formDiv {
+    text-align: center;
+    form {
+      max-width: 300px;
+      margin: auto auto;
+    }
+  }
+
+  .smallMedia {
+    display: inline-block;
+    width: 100px;
+  }
+}
