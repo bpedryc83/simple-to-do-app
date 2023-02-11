@@ -1,0 +1,33 @@
+@import '../../styles/settings.scss';
+
+.main_nav {
+  background-color: darken($color-dark, 3%);
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.icon {
+  margin-left: 20px;
+  flex: 2;
+  font-size: 24px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.links {
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+}
