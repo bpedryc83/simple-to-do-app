@@ -2,19 +2,20 @@ import styles from './NavBar.module.scss';
 import Container from '../Container/Container';
 import { faListCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => <nav className={styles.main_nav}>
     <Container>
       <div className={styles.nav_container}>
         <div className={styles.icon}>
-          <a href="/">
+          <Link to="/">
             <FontAwesomeIcon icon={faListCheck} />
-          </a>
+          </Link>
         </div>
         <div className={styles.links}>
-          <a href="/">Home</a>
-          <a href="/favorite">Favorite</a>
-          <a href="/about">About</a>
+          <NavLink to="/" className={({ isActive }) => isActive ? styles.linkActive : undefined}>Home</NavLink>
+          <NavLink to="/favorite" className={({ isActive }) => isActive ? styles.linkActive : undefined}>Favorite</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? styles.linkActive : undefined}>About</NavLink>
         </div>
       </div>
     </Container>

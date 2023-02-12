@@ -16,7 +16,6 @@ const CardForm = props => {
       e.preventDefault();
       const id = shortid();
       const columnId = props.columnId;
-      //dispatch({ type: 'ADD_CARD', payload: { id, columnId, title} });
       dispatch(addCard( { id, columnId, title} ));
       setTitle('');
   }
