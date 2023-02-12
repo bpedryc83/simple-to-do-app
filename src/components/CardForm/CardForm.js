@@ -5,7 +5,7 @@ import shortid from 'shortid';
 
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
-import { addCard } from '../../redux/store';
+import { addCard } from '../../redux/cardsRedux';
 
 const CardForm = props => {
   const [title, setTitle] = useState('');

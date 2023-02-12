@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { changeSearchText } from '../../redux/store';
+import { changeSearchText } from '../../redux/searchTextRedux';
 
 const SearchForm = () => {
 
