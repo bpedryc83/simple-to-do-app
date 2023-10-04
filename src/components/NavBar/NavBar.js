@@ -7,9 +7,10 @@ import { Link, NavLink } from 'react-router-dom';
 const NavBar = () => <nav className={styles.main_nav}>
     <Container>
       <div className={styles.nav_container}>
-        <div className={styles.icon}>
-          <Link to="/">
+        <div className={styles.icon_and_title}>
+          <Link to="/" className={styles.vertical_align}>
             <FontAwesomeIcon icon={faListCheck} />
+            <span className={styles.app_name}>Checker</span>
           </Link>
         </div>
         <div className={styles.links}>

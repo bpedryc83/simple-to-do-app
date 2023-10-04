@@ -10,13 +10,25 @@
   padding: 10px;
 }
 
-.icon {
+.vertical_align {
+  display: flex;
+}
+
+.icon_and_title {
   margin-left: 20px;
+  display: flex;
   flex: 2;
+  justify-content: flex-start;
   font-size: 24px;
   a {
     color: white;
     text-decoration: none;
+  }
+  .app_name {
+    height: 100%;
+    padding-left: 12px;
+    font-size: 22px;
+    color: #1fcc74;
   }
 }
 
@@ -24,6 +36,7 @@
   flex: 6;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   font-size: 18px;
   a {
     color: white;
