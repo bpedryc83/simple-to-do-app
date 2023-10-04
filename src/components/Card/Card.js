@@ -25,8 +25,8 @@ const Card = props => {
     <li className={styles.card}>
       {props.title}
       <div>
-        <span className={ clsx('fa fa-star', props.isFavorite === false && 'fa fa-star-o')} onClick={e => changeFavorite(e)}/>
-        <span className={'fa fa-trash ' + styles.iconPadding} onClick={e => removeCard(e)}/>
+        <span className={ clsx('fa fa-star', props.isFavorite === false && 'fa fa-star-o', styles.cursorOnIcon)} onClick={e => changeFavorite(e)}/>
+        <span className={'fa fa-trash ' + styles.iconPadding + ' ' + styles.cursorOnIcon} onClick={e => removeCard(e)}/>
       </div>
     </li>
   )
