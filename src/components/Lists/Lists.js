@@ -3,6 +3,7 @@ import { getAllLists } from '../../redux/store';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ListForm from '../ListForm/ListForm';
+import FormHeader from '../FormHeader/FormHeader';
 
 const Lists = () => {
 
@@ -17,6 +18,7 @@ const Lists = () => {
         <p>{list.description}</p>
       </Link>
     ))}
+    <FormHeader title='ADD NEW LIST' />
     <ListForm />
     </section>
 )}

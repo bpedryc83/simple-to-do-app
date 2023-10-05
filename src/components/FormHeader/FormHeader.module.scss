@@ -1,0 +1,18 @@
+@import '../../styles/settings.scss';
+
+.headerDeployment {
+  margin: auto auto;
+  margin-top: 60px;
+  margin-bottom: 20px;  
+  width: 35%;
+  min-width: 200px;
+}
+
+.header {
+  background-color: darken($color-dark, 6%);
+  border: 1px dashed black;
+  text-align: center;
+  font-size: 15px;
+  color: $color-warning;
+  line-height: 35px;
+}

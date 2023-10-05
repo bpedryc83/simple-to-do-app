@@ -1,6 +1,7 @@
 import styles from './List.module.scss';
 import Column from '../Column/Column';
 import SearchForm from '../SearchForm/SearchForm';
+import FormHeader from '../FormHeader/FormHeader';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
@@ -34,6 +35,7 @@ const List = () => {
           />
         )}
       </section>
+      <FormHeader title = 'ADD NEW COLUMN' />
       <ColumnForm listId={listId}/>
     </div>
   );

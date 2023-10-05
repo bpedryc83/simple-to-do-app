@@ -7,8 +7,8 @@ const initialState = {
     },
    {
       id: '2',
-      title: 'Test list',
-      description: 'Lorem Ipsum'
+      title: 'Shopping list',
+      description: 'What I want to buy to my home'
    }
  ],
   
@@ -34,9 +34,22 @@ const initialState = {
     {
       listId: '2',
       id: 4,
-      title: 'TestTitle',
+      title: 'Furnitures',
+      icon: 'gamepad',
+    },
+    {
+      listId: '2',
+      id: 5,
+      title: 'Flora',
+      icon: 'gamepad',
+    },
+    {
+      listId: '2',
+      id: 6,
+      title: 'Kitchen',
       icon: 'gamepad',
     }
+
   ],
 
   cards: [
