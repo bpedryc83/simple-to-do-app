@@ -17,37 +17,37 @@ const initialState = {
       listId: '1',
       id: 1,
       title: 'Books',
-      icon: 'book',
+      iconId: 6,
     },
     {
       listId: '1',
       id: 2,
       title: 'Movies',
-      icon: 'film',
+      iconId: 5,
     },
     {
       listId: '1',
       id: 3,
       title: 'Games',
-      icon: 'gamepad',
+      iconId: 7,
     },
     {
       listId: '2',
       id: 4,
       title: 'Furnitures',
-      icon: 'gamepad',
+      iconId: 7,
     },
     {
       listId: '2',
       id: 5,
       title: 'Flora',
-      icon: 'gamepad',
+      iconId: 7,
     },
     {
       listId: '2',
       id: 6,
       title: 'Kitchen',
-      icon: 'gamepad',
+      iconId: 7,
     }
 
   ],
@@ -59,6 +59,21 @@ const initialState = {
     { id: 4, columnId: 2, title: 'Star Wars', isFavorite: false },
     { id: 5, columnId: 3, title: 'The Witcher', isFavorite: false },
     { id: 6, columnId: 3, title: 'Skyrim', isFavorite: false }
+  ],
+
+  icons: [
+    { id: 1, iconName: 'clipboard' },
+    { id: 2, iconName: 'laptop' },
+    { id: 3, iconName: 'gift' },
+    { id: 4, iconName: 'car' },
+    { id: 5, iconName: 'film' },
+    { id: 6, iconName: 'book' },
+    { id: 7, iconName: 'gamepad' },
+    { id: 8, iconName: 'bicycle' },
+    { id: 9, iconName: 'paw' },
+    { id: 10, iconName: 'suitcase' },
+    { id: 11, iconName: 'map' },
+    { id: 12, iconName: 'stethoscope' },
   ],
 
   searchText:'',

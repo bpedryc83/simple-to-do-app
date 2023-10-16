@@ -6,6 +6,7 @@ import listsReducer from './listsRedux';
 import columnsReducer from './columnsRedux';
 import cardsReducer from './cardsRedux';
 import searchTextReducer from './searchTextRedux';
+import iconsReducer from './searchTextRedux copy';
 
 
 export const getFilteredCards = ({ cards, searchText }, columnId) => cards
@@ -16,13 +17,15 @@ export const getAllColumns = (state) => state.columns;
 export const getAllLists = (state) => state.lists;
 export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId);
-
+export const getAllIcons = ( state ) => state.icons; 
+export const getIconById = (store, iconId) => store.icons.find(icon => icon.id === iconId);
 
 const subreducers = {
   lists: listsReducer,
   columns: columnsReducer,
   cards: cardsReducer,
-  searchText: searchTextReducer
+  searchText: searchTextReducer,
+  icons: iconsReducer
 }
 
 const reducer = combineReducers(subreducers);

@@ -1,0 +1,30 @@
+@import '../../styles/settings.scss';
+
+.iconTable {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  max-width: 120px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid $color-warning; 
+}
+
+.iconRow {
+  width: 33%;
+}
+
+.iconCell {
+  font-size: 16px;
+  color: black;
+  padding: 4px 1px;
+  display: block;
+  &:hover {
+    font-size: 19px;
+    color: $color-warning;
+    cursor: pointer;
+  } 
+}

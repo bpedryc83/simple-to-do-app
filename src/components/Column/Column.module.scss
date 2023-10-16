@@ -16,23 +16,115 @@
   }
 }
 
-.title {
+.header {
+  display: flex;
   text-align: center;
   font-size: ($base-size * 1.5);
   margin: 0 0 ($base-size * 1.5) 0;
+  padding: 7px 0;
+}
+
+.headerInEdition {
+  display: flex;
+  text-align: center;
+  font-size: ($base-size * 1.5);
+  margin: 0 0 ($base-size * 1.5) 0;
+  padding: 7px 3px;
+  border: 1px solid $color-warning;
+  border-radius: 6px;
 }
 
 .icon::before {
-  padding-right: $base-size;
+  //padding-right: $base-size;
   color: $color-warning;
   font-size: ($base-size * 2);
   vertical-align: middle;
   position: relative;
-  top: - math.div($base-size, 3);
+  top: - math.div($base-size, 4);
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+  font-size: 13.2px;
+  color: grey;
+  width: 85px;
 }
 
 .cards {
   padding: math.div($base-size, 2) 0;
+}
+
+.blankArea {
+  width: 17%;
+}
+
+.contentArea {
+  width: 66%;
+  font-weight: bold;
+}
+
+.toolsArea {
+  display: flex;
+  border: 1px dotted rgb(219, 104, 104);
+  border-radius: 5px;
+  align-items: center;
+  width: 17%;
+  font-size: 14px;
+  color: rgb(219, 104, 104);
+  .check {
+    flex: 0 0 50%;
+  }
+
+  .edition {
+    flex: 0 0 50%;
+  }
+
+  .trash {
+    flex: 0 0 50%;
+  }
+}
+
+.iconPadding {
+  margin-left: 1px;
+}
+
+.cursorOnIcon {
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.25) !important;
+  }
+}
+
+.afterIcon {
+  padding: 0 4px;
+}
+
+.afterIconInEdition {
+  padding: 0 7px;
+}
+
+.triangle {
+  position: absolute;
+  font-size: 12px;
+  top: 5px;
+  left: 1px;
+}
+
+.relative {
+  position: relative;
+}
+
+.top {
+  position: relative;
+  z-index: 10;
+}
+
+.bottom {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {

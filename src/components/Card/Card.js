@@ -61,12 +61,12 @@ const Card = props => {
     <div ref={cardRef}>
       {!isEditing && 
         <li className={styles.card}>
-            {props.title}
-            <div>
-              <span className={ clsx('fa fa-star', props.isFavorite === false && 'fa fa-star-o', styles.cursorOnIcon)} onClick={e => changeFavorite(e)}/>
-              <span className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.cursorOnIcon} onClick={e => editCurrentCard(e)}/>
-              <span className={'fa fa-trash ' + styles.iconPadding + ' ' + styles.cursorOnIcon} onClick={e => removeCard(e)}/>
-            </div>
+          {props.title}
+          <div>
+            <span className={ clsx('fa fa-star', props.isFavorite === false && 'fa fa-star-o', styles.cursorOnIcon)} onClick={e => changeFavorite(e)}/>
+            <span className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.cursorOnIcon} onClick={e => editCurrentCard(e)}/>
+            <span className={'fa fa-trash ' + styles.iconPadding + ' ' + styles.cursorOnIcon} onClick={e => removeCard(e)}/>
+          </div>
         </li>
       }
       {isEditing && 

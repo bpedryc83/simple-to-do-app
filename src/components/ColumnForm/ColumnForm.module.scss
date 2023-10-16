@@ -1,16 +1,31 @@
 @import '../../styles/settings.scss';
 
 .columnForm {
-
   text-align: center;
   padding: 10px;
   span {
-    margin: 0 8px;
+    margin-right: 3px;
   }
 }
 
 .formDiv {
   text-align: center;
+}
+
+.paddingLeft {
+  padding-left: 15px;
+}
+
+.relative {
+  position: relative;
+}
+
+.choseIcon {
+  position: absolute;
+  left: 20px;
+  top: -2px;
+  font-size: 18px !important;
+  color: $color-warning;
 }
 
 @media (max-width: 550px){
