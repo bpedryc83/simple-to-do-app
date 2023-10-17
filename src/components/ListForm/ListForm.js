@@ -25,9 +25,19 @@ const ListForm = () => {
     <div className={styles.formDiv}>
       <form className={styles.listForm} onSubmit={handleSubmit}>
         <span className={styles.smallMedia}>Title: </span>
-        <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+        <TextInput
+          value={title}
+          maxLength={25}
+          pattern="[a-zA-Z0-9 ]{3,25}"
+          title="Please use only letters and digitals. Min-max characters: 3-25."
+          onChange={e => setTitle(e.target.value)} />
         <span className={styles.smallMedia}>Description: </span>
-        <TextInput value={description} onChange={e => setDescription(e.target.value)} />
+        <TextInput
+          value={description}
+          maxLength={40}
+          pattern="[a-zA-Z0-9 ]{3,40}"
+          title="Please use only letters and digitals. Min-max characters: 3-40."
+          onChange={e => setDescription(e.target.value)} />
         <Button>Add list</Button>
       </form>
     </div>

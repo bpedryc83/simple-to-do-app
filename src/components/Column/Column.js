@@ -98,22 +98,32 @@ const Column = props => {
           </div>
         }
         {isEditing &&
-          <div className={styles.headerInEdition}>
-            <div className={styles.blankArea} />
-            <div className={styles.contentArea}>
-              <span ref={chooseIconRef} className={styles.icon + ' fa fa-' + icon.iconName + ' ' + styles.relative} onClick={e => handleChangeIcon(e)}>
-                <span className={styles.afterIconInEdition + ' ' + styles.relative}>
-                  <div className={styles.triangle}>{'\u25BC'}</div>
-                  {showIconsList && <IconTable setIcon={setIconId} setShowIconsList={setShowIconsList} />}
+          <form onSubmit={(e) => changeColumnHeader(e, props.id)}>
+            <div className={styles.headerInEdition}>
+              <div className={styles.blankArea} />
+              <div className={styles.contentArea}>
+                <span ref={chooseIconRef} className={styles.icon + ' fa fa-' + icon.iconName + ' ' + styles.relative} onClick={e => handleChangeIcon(e)}>
+                  <span className={styles.afterIconInEdition + ' ' + styles.relative}>
+                    <div className={styles.triangle}>{'\u25BC'}</div>
+                    {showIconsList && <IconTable setIcon={setIconId} setShowIconsList={setShowIconsList} />}
+                  </span>
                 </span>
-              </span>
-              <input value={title} className={styles.input + ' ' + styles.inEdition} onChange={e => setTitle(e.target.value)} />
+                <input
+                  type="text"
+                  value={title}
+                  maxLength={12}
+                  pattern="[a-zA-Z0-9 ]{3,12}"
+                  title="Please use only letters and digitals. Min-max characters: 3-12."
+                  className={styles.input + ' ' + styles.inEdition}
+                  onChange={e => setTitle(e.target.value)}
+                />
+              </div>
+              <div className={styles.toolsArea}>
+                <button type="submit" ref={checkIconRef} className={'fa fa-check ' + styles.button + ' ' + styles.iconPadding + ' ' + styles.cursorOnIcon + ' ' + styles.check } />
+                <span className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.edition }/>
+              </div>
             </div>
-            <div className={styles.toolsArea}>
-              <span ref={checkIconRef} className={'fa fa-check ' + styles.iconPadding + ' ' + styles.cursorOnIcon + ' ' + styles.check } onClick={e => changeColumnHeader(e, props.id)} />
-              <span className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.edition }/>
-            </div>
-          </div>
+          </form>
         }
       </div>
       <ul className={`${styles.cards} ${styles.bottom}`}>

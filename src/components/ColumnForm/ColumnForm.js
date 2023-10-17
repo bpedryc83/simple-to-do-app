@@ -67,7 +67,14 @@ const ColumnForm = props => {
     <div className={styles.formDiv}>
       <form className={styles.columnForm} onSubmit={handleSubmit}>
         <span className={styles.smallMedia}>Title: </span>
-        <TextInput value={title} onChange={e => setTitle(e.target.value)} required />
+        <TextInput 
+          value={title}
+          maxLength={12}
+          pattern="[a-zA-Z0-9 ]{3,12}"
+          title="Please use only letters and digitals. Min-max characters: 3-12."
+          onChange={e => setTitle(e.target.value)}
+          required
+        />
         <span className={`${styles.smallMedia} ${styles.paddingLeft}`}>Icon: </span>
         <span ref={iconsListRef} className={styles.relative}>
           <span onClick={e => handleSetIcon(e)}>

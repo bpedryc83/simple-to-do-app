@@ -55,8 +55,8 @@ const ListDrawItem = props => {
       {!isEditing && <div className={styles.listItem}>
         <div className={styles.listContent}>
           <Link to={"/list/" + props.list.id} >
-          <h3>{title}</h3>
-          <p>{description}</p>
+            <h3>{props.list.title}</h3>
+            <p>{props.list.description}</p>
           </Link>
         </div>
         <div className={styles.additionalContent}>
@@ -65,20 +65,35 @@ const ListDrawItem = props => {
         </div>
       </div>
       }
-      {isEditing && <div className={styles.listItemInEdition}>
-        <div className={styles.listContent}>
-          <h3>
-            <input value={title} className={styles.input} onChange={e => setTitle(e.target.value)} />
-          </h3>
-          <p>
-            <input value={description} className={styles.input} onChange={e => setDescription(e.target.value)} /> 
-          </p>
-        </div>
-        <div className={styles.additionalContent}>       
-          <div className={'fa fa-check ' + styles.iconPadding + ' ' + styles.cursorOnIcon + ' ' + styles.check} onClick={e => changeList(e, props.list.id)} />
-          <div className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.edition} onClick={e => editCurrentList(e)}/>
-        </div>
-      </div>
+      {isEditing && 
+        <form onSubmit={e => changeList(e, props.list.id)}>      
+          <div className={styles.listItemInEdition}>
+            <div className={styles.listContent}>
+              <h3>
+                <input
+                  value={title}
+                  maxLength={25}
+                  pattern="[a-zA-Z0-9 ]{3,25}"
+                  title="Please use only letters and digitals. Min-max characters: 3-25."
+                  className={styles.input}
+                  onChange={e => setTitle(e.target.value)} />
+              </h3>
+              <p>
+                <input
+                  value={description}
+                  maxLength={40}
+                  pattern="[a-zA-Z0-9 ]{3,40}"
+                  title="Please use only letters and digitals. Min-max characters: 3-40."
+                  className={styles.input}
+                  onChange={e => setDescription(e.target.value)} /> 
+              </p>
+            </div>
+            <div className={styles.additionalContent}>       
+              <button type="submit" className={'fa fa-check ' + styles.button + ' ' + styles.iconPadding + ' ' + styles.cursorOnIcon + ' ' + styles.check} />
+              <div className={'fa fa-pencil ' + styles.iconPadding + ' ' + styles.edition} />
+            </div>
+          </div>
+        </form>
       }
     </div>
   )

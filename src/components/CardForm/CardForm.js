@@ -24,7 +24,12 @@ const CardForm = props => {
 	return (
     <div className={styles.formDiv}>
       <form className={styles.cardForm} onSubmit={handleSubmit}>
-        <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+        <TextInput 
+          value={title}
+          maxLength={25}
+          pattern="[a-zA-Z0-9 ]{3,25}"
+          title="Please use only letters and digitals. Min-max characters: 3-25."
+          onChange={e => setTitle(e.target.value)} />
         <Button>Add card</Button>
       </form>
     </div>

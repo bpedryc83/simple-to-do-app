@@ -69,14 +69,22 @@ const Card = props => {
           </div>
         </li>
       }
-      {isEditing && 
-        <li className={styles.cardInEdition}  >
-          <input value={title} className={styles.input} onChange={e => setTitle(e.target.value)} />
-          <div>
-            <span className={'fa fa-check ' + styles.iconPadding + ' ' + styles.cursorOnIcon } onClick={e => changeTitle(e, props.id)} />
-            <span className={'fa fa-pencil ' + styles.iconPadding }/>
-          </div>
-        </li>
+      {isEditing &&
+        <form onSubmit={(e) => changeTitle(e, props.id)}>
+          <li className={styles.cardInEdition}  >
+            <input 
+              value={title}
+              maxLength={25}
+              pattern="[a-zA-Z0-9 ]{3,25}"
+              title="Please use only letters and digitals. Min-max characters: 3-25."
+              className={styles.input}
+              onChange={e => setTitle(e.target.value)} />
+            <div>
+              <button type="submit" className={'fa fa-check ' + styles.button + ' ' + styles.iconPadding + ' ' + styles.cursorOnIcon } />
+              <span className={'fa fa-pencil ' + styles.iconPadding }/>
+            </div>
+          </li>
+        </form>
       }
     </div>
   )

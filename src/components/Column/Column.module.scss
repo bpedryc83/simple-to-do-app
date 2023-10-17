@@ -3,17 +3,13 @@
 
 .column {
   flex-shrink: 0;
-  width: calc(33.3% - 14px);
+  width: calc(33.3% - 12px);
   background: $color-light;
-  margin: 0 $base-size $base-size 0;
+  margin: 0 0 $base-size $base-size;
   padding: ($base-size * 1.5);
   border-radius: $radius;
   box-shadow: 0 math.div($base-size, 4) 0 rgba(0,0,0,0.3);
   color: $color-dark;
-
-  &:last-child {
-    margin: 0 0 $base-size 0;
-  }
 }
 
 .header {
@@ -50,6 +46,12 @@
   font-size: 13.2px;
   color: grey;
   width: 85px;
+}
+
+.button {
+  border: none;
+  background-color: white;
+  color: $color-warning;
 }
 
 .cards {
