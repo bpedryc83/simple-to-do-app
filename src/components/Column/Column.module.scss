@@ -133,4 +133,30 @@
     width: 100%;
     margin: 0 0 $base-size 0;
   }
+
+  .blankArea {
+    width: 9%;
+  }
+  
+  .contentArea {
+    width: 82%;
+  }
+  
+  .toolsArea {
+    width: 9%;
+  }  
+}
+
+@media (max-width: 500px) {
+  .blankArea {
+    width: 12%;
+  }
+  
+  .contentArea {
+    width: 76%;
+  }
+  
+  .toolsArea {
+    width: 12%;
+  }  
 }

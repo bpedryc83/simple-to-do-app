@@ -74,9 +74,9 @@ const Card = props => {
           <li className={styles.cardInEdition}  >
             <input 
               value={title}
-              maxLength={25}
-              pattern="[a-zA-Z0-9 ]{3,25}"
-              title="Please use only letters and digitals. Min-max characters: 3-25."
+              maxLength={20}
+              pattern="[a-zA-Z0-9 ]{3,20}"
+              title="Please use only letters and digitals. Min-max characters: 3-20."
               className={styles.input}
               onChange={e => setTitle(e.target.value)} />
             <div>

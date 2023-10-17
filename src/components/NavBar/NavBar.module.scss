@@ -47,3 +47,37 @@
     color: $color-warning;
   }
 }
+
+@media (max-width: 500px) {
+  
+  .icon_and_title {
+    font-size: 18px;
+    .app_name {
+      font-size: 18px;
+    }
+  }
+  
+  .links {
+    font-size: 16px;
+    a {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  
+  .icon_and_title {
+    font-size: 14px;
+    .app_name {
+      font-size: 14px;
+    }
+  }
+  
+  .links {
+    font-size: 14px;
+    a {
+      margin-right: 8px;
+    }
+  }
+}

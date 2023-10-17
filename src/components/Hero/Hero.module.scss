@@ -8,3 +8,11 @@
   font-style: italic;
   font-weight: normal;
 }
+
+@media (max-width: 500px) {
+  
+  .subtitle {
+    font-size: ($base-size * 1.5);
+  }
+
+}
