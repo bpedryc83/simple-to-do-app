@@ -6,34 +6,6 @@
   justify-content: center;
 }
 
-.title {
-  padding: ($base-size * 3) 0;
-  text-align: center;
-  font-size: ($base-size * 3);
-  text-transform: uppercase;
-}
-
-.subtitle {
-  margin-top: (- $base-size * 3);
-  padding: ($base-size * 2) 0;
-  text-align: center;
-  font-size: ($base-size * 2);
-  font-style: italic;
-  font-weight: normal;
-}
-
-.card {
-  position: relative;
-  background: $color-light;
-  border: 1px solid lighten($color-dark, 60%);
-  padding: $base-size;
-  margin: 0 0 $base-size 0;
-  border-radius: $radius;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
 .textAttention {
   font-size: 20px;
   text-align: center;
@@ -55,6 +27,25 @@
 
 .cards {
   padding: math.div($base-size, 2) 0;
+}
+
+.overCard {
+  font-size: ($base-size * 0.9);
+  color: rgb(72, 189, 72);
+  font-style: italic;
+  margin-bottom: 3px;
+}
+
+.firstSpan {
+  padding: 0 30px 0 5px;
+}
+
+.divBelowCard {
+  height: 13px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {

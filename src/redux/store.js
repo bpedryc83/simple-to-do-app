@@ -18,6 +18,7 @@ export const getAllColumns = (state) => state.columns;
 export const getAllLists = (state) => state.lists;
 export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId);
+export const getColumnByCard = ({ columns }, columnId) => columns.filter(column => column.id === columnId);
 export const getAllIcons = ( state ) => state.icons; 
 export const getIconById = (store, iconId) => store.icons.find(icon => icon.id === iconId);
 

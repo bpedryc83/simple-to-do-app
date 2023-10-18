@@ -5,6 +5,7 @@ const IconInput = props => <input
   value={props.icon ? ' \u00A0 \u00A0 \u00A0 \u00A0 \u25BC' : ''}
   placeholder={props.placeholder}
   type="text"
+  onChange={() => {}}
   {...(props.required && { required: true })}
   />
 
