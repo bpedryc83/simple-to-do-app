@@ -11,6 +11,16 @@ import iconsReducer from './iconsRedux';
 
 export const getFilteredCards = ({ cards, searchText }, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchText));
+export const getFilteredColumns = ({ columns, cards, searchText }, listId) => {
+  const columnsFromList = columns.filter(column => column.listId === listId);
+  const filteredColumns = columnsFromList.filter(column => {
+    return searchText === ''
+      ? true
+      : cards.some(card => card.columnId === column.id && strContains(card.title, searchText));
+  });
+  return filteredColumns;
+}
+
 export const getFavoriteCards = ( {cards} ) => cards.filter(card => card.isFavorite === true);
 
 export const getAllCards = (state) => state.cards;
