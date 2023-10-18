@@ -14,7 +14,7 @@ const IconTable = props => {
   return (
     <div className={styles.iconTable}>
       {Array.from({ length: 4 }).map((_, rowIndex) => (
-        <div className={styles.iconRow} key={rowIndex}>
+        <div key={rowIndex}>
           {Array.from({ length: 4 }).map((_, colIndex) => {
             const iconIndex = rowIndex * 4 + colIndex;
             const icon = icons[iconIndex];

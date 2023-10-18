@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getFilteredCards } from '../../redux/store';
 import { getIconById } from '../../redux/store';
 import { deleteColumn } from '../../redux/columnsRedux';
+import { deleteCard } from '../../redux/cardsRedux';
 import { editColumn } from '../../redux/columnsRedux';
 import IconTable from '../IconTable/IconTable';
 
@@ -44,6 +45,11 @@ const Column = props => {
   const delColumn = (e, id) => {
     e.preventDefault();
     dispatch(deleteColumn( { id }));
+    cards.map(card => {
+      const id = card.id;
+      dispatch(deleteCard( {id} ));
+      return null;
+    })
   }
 
   useEffect(() => {

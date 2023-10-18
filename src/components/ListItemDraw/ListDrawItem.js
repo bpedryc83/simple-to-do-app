@@ -1,9 +1,14 @@
 import styles from './ListDrawItem.module.scss';
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { editList } from '../../redux/listsRedux';
 import { deleteList } from '../../redux/listsRedux';
+import { deleteColumn } from '../../redux/columnsRedux';
+import { deleteCard } from '../../redux/cardsRedux';
+import { getColumnsByList, getAllCards } from '../../redux/store';
+
 
 const ListDrawItem = props => {
 
@@ -13,6 +18,9 @@ const ListDrawItem = props => {
 
   const dispatch = useDispatch();
   const listRef = useRef(null);
+
+  const columnsInList = useSelector(state => getColumnsByList(state, props.list.id));
+  const allCards = useSelector(getAllCards);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -45,9 +53,24 @@ const ListDrawItem = props => {
     setIsEditing(false);
   }
 
-  const delList = (e, id) => {
+  const delList = (e, listId) => {
     e.preventDefault();
-    dispatch(deleteList( { id }));
+    const columnsIdsInList = columnsInList.map(column => column.id);
+
+    columnsIdsInList.forEach(columnId => {
+      allCards
+        .filter(card => card.columnId === columnId)
+        .forEach(card => {
+          dispatch(deleteCard({ id: card.id }));
+        });
+    });
+
+    columnsInList.map(column => {
+      dispatch(deleteColumn( {id: column.id} ));
+      return null;
+    })
+
+    dispatch(deleteList( { id: listId }));
   }
 
   return (
