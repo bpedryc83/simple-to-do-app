@@ -99,7 +99,9 @@ const ListDrawItem = props => {
                   pattern="[a-zA-Z0-9 ]{3,25}"
                   title="Please use only letters and digitals. Min-max characters: 3-25."
                   className={styles.input}
-                  onChange={e => setTitle(e.target.value)} />
+                  onChange={e => setTitle(e.target.value)}
+                  required
+                />
               </h3>
               <p>
                 <input
@@ -108,7 +110,9 @@ const ListDrawItem = props => {
                   pattern="[a-zA-Z0-9 ]{3,40}"
                   title="Please use only letters and digitals. Min-max characters: 3-40."
                   className={styles.input}
-                  onChange={e => setDescription(e.target.value)} /> 
+                  onChange={e => setDescription(e.target.value)}
+                  required
+                /> 
               </p>
             </div>
             <div className={styles.additionalContent}>       

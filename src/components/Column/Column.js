@@ -122,6 +122,7 @@ const Column = props => {
                   title="Please use only letters and digitals. Min-max characters: 3-12."
                   className={styles.input + ' ' + styles.inEdition}
                   onChange={e => setTitle(e.target.value)}
+                  required
                 />
               </div>
               <div className={styles.toolsArea}>

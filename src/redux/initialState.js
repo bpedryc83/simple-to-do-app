@@ -3,7 +3,7 @@ const initialState = {
     {
       id: '1',
       title: 'Free time',
-      description: 'Interesting things I want to do...'
+      description: 'Interesting things I want to do'
     },
     {
       id: '2',

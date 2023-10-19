@@ -78,7 +78,9 @@ const Card = props => {
               pattern="[a-zA-Z0-9 ]{3,20}"
               title="Please use only letters and digitals. Min-max characters: 3-20."
               className={styles.input}
-              onChange={e => setTitle(e.target.value)} />
+              onChange={e => setTitle(e.target.value)}
+              required
+            />
             <div>
               <button type="submit" className={'fa fa-check ' + styles.button + ' ' + styles.iconPadding + ' ' + styles.cursorOnIcon } />
               <span className={'fa fa-pencil ' + styles.iconPadding }/>
