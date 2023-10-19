@@ -21,6 +21,7 @@ const Column = props => {
   const columnRef = useRef(null);
   const chooseIconRef = useRef(null);
   const checkIconRef = useRef(null);
+  const inputRef = useRef(null);
   const dispatch = useDispatch();
   const cards = useSelector(state => getFilteredCards(state, props.id));
   const icon = useSelector(state => getIconById(state, iconId));
@@ -79,6 +80,10 @@ const Column = props => {
 
     if (isEditing) {
       document.addEventListener('click', handleClickOutside);
+      setTimeout(() => {
+        inputRef.current.focus();
+        inputRef.current.setSelectionRange(inputRef.current.value.length, inputRef.current.value.length);
+      }, 0);
     }
 
     return () => {
@@ -115,6 +120,7 @@ const Column = props => {
                   </span>
                 </span>
                 <input
+                  ref={inputRef}
                   type="text"
                   value={title}
                   maxLength={12}

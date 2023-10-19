@@ -13,6 +13,7 @@ const Card = props => {
 
   const dispatch = useDispatch();
   const cardRef = useRef(null);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -27,12 +28,17 @@ const Card = props => {
 
     if (isEditing) {
       document.addEventListener('click', handleClickOutside);
+      setTimeout(() => {
+        inputRef.current.focus();
+        inputRef.current.setSelectionRange(inputRef.current.value.length, inputRef.current.value.length);
+      }, 0);
     }
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isEditing]);
+  
 
   const changeFavorite = (e) => {
     e.preventDefault();
@@ -73,6 +79,7 @@ const Card = props => {
         <form onSubmit={(e) => changeTitle(e, props.id)}>
           <li className={styles.cardInEdition}  >
             <input 
+              ref={inputRef}
               value={title}
               maxLength={20}
               pattern="[a-zA-Z0-9 ]{3,20}"

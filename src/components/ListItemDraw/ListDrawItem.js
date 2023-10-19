@@ -18,6 +18,7 @@ const ListDrawItem = props => {
 
   const dispatch = useDispatch();
   const listRef = useRef(null);
+  const inputRef = useRef(null);
 
   const columnsInList = useSelector(state => getColumnsByList(state, props.list.id));
   const allCards = useSelector(getAllCards);
@@ -35,6 +36,10 @@ const ListDrawItem = props => {
 
     if (isEditing) {
       document.addEventListener('click', handleClickOutside);
+      setTimeout(() => {
+        inputRef.current.focus();
+        inputRef.current.setSelectionRange(inputRef.current.value.length, inputRef.current.value.length);
+      }, 0);
     }
 
     return () => {
@@ -94,6 +99,7 @@ const ListDrawItem = props => {
             <div className={styles.listContent}>
               <h3>
                 <input
+                  ref={inputRef}
                   value={title}
                   maxLength={25}
                   pattern="[a-zA-Z0-9 ]{3,25}"
