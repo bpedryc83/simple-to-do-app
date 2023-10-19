@@ -19,13 +19,13 @@ This website app has been developed following Responsive Web Design (RWD).
 ## Screenshots
 
 ## Lists
-  <img src="src/images/lists.jpg" width="420" />
+  <img src="src/images/lists.jpg" width="620" />
   
 ## Columns and cards  
-  <img src="src/images/columns_cards.jpg" width="420" />
+  <img src="src/images/columns_cards.jpg" width="620" />
  
 ## Favorites cards
-  <img src="src/images/favorites.jpg" width="420" />
+  <img src="src/images/favorites.jpg" width="620" />
 
 ## Icons available for columns
-  <img src="src/images/icons.jpg" width="300" />
+  <img src="src/images/icons.jpg" width="450" />
