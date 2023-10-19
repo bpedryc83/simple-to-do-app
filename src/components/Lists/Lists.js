@@ -1,9 +1,9 @@
-import styles from './Lists.module.scss';
-import { getAllLists } from '../../redux/store';
 import { useSelector } from 'react-redux';
-import ListForm from '../ListForm/ListForm';
+import { getAllLists } from '../../redux/store';
 import FormHeader from '../FormHeader/FormHeader';
+import ListForm from '../ListForm/ListForm';
 import ListDrawItem from '../ListItemDraw/ListDrawItem';
+import styles from './Lists.module.scss';
 
 const Lists = () => {
   const lists = useSelector(getAllLists);

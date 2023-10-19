@@ -1,10 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
-import styles from './Card.module.scss';
 import clsx from "clsx";
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleCardFavorite } from '../../redux/cardsRedux';
-import { editCard } from '../../redux/cardsRedux';
-import { deleteCard } from '../../redux/cardsRedux';
+import { deleteCard, editCard, toggleCardFavorite } from '../../redux/cardsRedux';
+import styles from './Card.module.scss';
 
 const Card = props => {
 

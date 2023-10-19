@@ -1,13 +1,11 @@
-import styles from './ListDrawItem.module.scss';
-import { useState, useRef, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { editList } from '../../redux/listsRedux';
-import { deleteList } from '../../redux/listsRedux';
-import { deleteColumn } from '../../redux/columnsRedux';
 import { deleteCard } from '../../redux/cardsRedux';
-import { getColumnsByList, getAllCards } from '../../redux/store';
+import { deleteColumn } from '../../redux/columnsRedux';
+import { deleteList, editList } from '../../redux/listsRedux';
+import { getAllCards, getColumnsByList } from '../../redux/store';
+import styles from './ListDrawItem.module.scss';
 
 
 const ListDrawItem = props => {

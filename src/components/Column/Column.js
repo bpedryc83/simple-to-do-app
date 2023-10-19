@@ -1,14 +1,12 @@
-import styles from './Column.module.scss';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCard } from '../../redux/cardsRedux';
+import { deleteColumn, editColumn } from '../../redux/columnsRedux';
+import { getFilteredCards, getIconById } from '../../redux/store';
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
-import { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getFilteredCards } from '../../redux/store';
-import { getIconById } from '../../redux/store';
-import { deleteColumn } from '../../redux/columnsRedux';
-import { deleteCard } from '../../redux/cardsRedux';
-import { editColumn } from '../../redux/columnsRedux';
 import IconTable from '../IconTable/IconTable';
+import styles from './Column.module.scss';
 
 const Column = props => {
 

@@ -1,11 +1,11 @@
-import styles from './ListForm.module.scss';
-import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import shortid from 'shortid';
+import styles from './ListForm.module.scss';
 
+import { addList } from '../../redux/listsRedux';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
-import { addList } from '../../redux/listsRedux';
 
 const ListForm = () => {
   const [title, setTitle] = useState('');

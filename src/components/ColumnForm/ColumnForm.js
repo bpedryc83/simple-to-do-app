@@ -1,14 +1,14 @@
-import styles from './ColumnForm.module.scss';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useState, useEffect, useRef } from 'react';
 import shortid from 'shortid';
+import styles from './ColumnForm.module.scss';
 
-import Button from '../Button/Button';
-import TextInput from '../TextInput/TextInput';
-import IconInput from '../IconInput/IconInput';
 import { addColumn } from '../../redux/columnsRedux';
-import IconTable from '../IconTable/IconTable';
 import { getAllIcons } from '../../redux/store';
+import Button from '../Button/Button';
+import IconInput from '../IconInput/IconInput';
+import IconTable from '../IconTable/IconTable';
+import TextInput from '../TextInput/TextInput';
 
 const ColumnForm = props => {
   const [title, setTitle] = useState('');

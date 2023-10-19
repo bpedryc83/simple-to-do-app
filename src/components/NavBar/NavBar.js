@@ -1,8 +1,8 @@
-import styles from './NavBar.module.scss';
-import Container from '../Container/Container';
 import { faListCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from 'react-router-dom';
+import Container from '../Container/Container';
+import styles from './NavBar.module.scss';
 
 const NavBar = () => <nav className={styles.main_nav}>
     <Container>
