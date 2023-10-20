@@ -12,7 +12,7 @@ A simple app designed for managing reminders involving important tasks, events, 
 - Redux
 - RWD
 
-The application was made based on provided fundamental styles, including the graphic backdrop of the main banner. However, most of the styles were personally created by the author. The entire code in React has been developed solely by the author, Bartłomiej Pedryc. 
+The application was made based on provided fundamental styles, including the graphic backdrop of the main banner. However, most of the styles were created by the author (Bartłomiej Pedryc). The entire code in React has been developed solely by the author.
 
 This website app has been developed following Responsive Web Design (RWD).
 
@@ -24,7 +24,7 @@ This website app has been developed following Responsive Web Design (RWD).
 ## Columns and cards  
   <img src="src/images/columns_cards.jpg" width="620" />
  
-## Favorites cards
+## Favorite cards
   <img src="src/images/favorites.jpg" width="620" />
 
 ## Icons available for columns
