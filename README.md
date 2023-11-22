@@ -2,7 +2,7 @@
 
 A simple app designed for managing reminders involving important tasks, events, or plans. Users can utilize a three-tiered system of organizing elements: lists, columns, and cards.
 
-## [Demo (click)](https://simple-to-do-app.bpedryc83.repl.co/)
+## [Demo (click)](https://simple-to-do-app-bpedryc83.replit.app/)
 
 ## Technologies
 
